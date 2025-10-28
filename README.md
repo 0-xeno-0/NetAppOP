@@ -52,6 +52,7 @@ Enter the NetApp Cluster FQDN or IP: [cluster-name]
 ...
 ```
 
+---
 
 ### 2. Guided Strict Mode
 This mode is for users who want to quickly provide only the mandatory parameters and skip all optional settings.
@@ -77,6 +78,8 @@ Enter the NetApp Cluster FQDN or IP: [cluster-name]
 ...
 ```
 
+---
+
 ### 3. One-Liner Mode (Full Automation)
 This mode is for power users or automation workflows. It uses the -OneLiner parameter to pass all 13 mandatory values in a single, comma-separated string. This mode skips all prompts.
 
@@ -101,6 +104,8 @@ DomainName: corp.local
 DnsServers: 192.168.10.5;192.168.10.6
 Note: For multiple DNS servers, separate them with a semi-colon (;) inside the string.
 
+---
+
  | Parameter | Description | Example |
  | :---: | :---: | :---:|
  | $ClusterName | FQDN or IP of the NetApp cluster management interface. | ontap.my.domain.com |
@@ -118,6 +123,7 @@ Note: For multiple DNS servers, separate them with a semi-colon (;) inside the s
  | $DnsServers | [Array] One or more DNS server IPs for the SVM. | 192.168.1.5 |
  | $DnsDomain | The DNS search domain for the SVM. | my.domain.com |
 
+---
 
 **Optional Parameters (Interactive Mode Only) :**
 These parameters can be provided on the command line, or the script will prompt for them if running in Full Interactive Mode.
@@ -130,6 +136,7 @@ These parameters can be provided on the command line, or the script will prompt 
  | string | $SharePermissionUser | The user/group for the share ACL (Default: BUILTIN\Users). |
  | string | $SharePermissionLevel | The permission level to grant (Default: Change). |
 
+---
 
 **Automation Parameters :**
  | DataType | VariableName | Description |
