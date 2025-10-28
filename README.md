@@ -119,20 +119,21 @@ Note: For multiple DNS servers, separate them with a semi-colon (;) inside the s
  | $DnsDomain | The DNS search domain for the SVM. | my.domain.com |
 
 
-**Optional Parameters (Interactive Mode Only)**
+**Optional Parameters (Interactive Mode Only) :**
 These parameters can be provided on the command line, or the script will prompt for them if running in Full Interactive Mode.
 
-[switch]$EnableNFS: If present, prompts to configure NFS access on the volume.
+ | DataType | VariableName | Description |
+ | :---: | :---: | :---:|
+ | switch | $EnableNFS | If present, prompts to configure NFS access on the volume. |
+ | string | $NfsRuleClient | The client spec for the NFS export rule (Default: 0.0.0.0/0). |
+ | switch | $SetShareACL | If present, prompts to set permissions on the new CIFS share. |
+ | string | $SharePermissionUser | The user/group for the share ACL (Default: BUILTIN\Users). |
+ | string | $SharePermissionLevel | The permission level to grant (Default: Change). |
 
-[string]$NfsRuleClient: The client spec for the NFS export rule (Default: 0.0.0.0/0).
 
-[switch]$SetShareACL: If present, prompts to set permissions on the new CIFS share.
-
-[string]$SharePermissionUser: The user/group for the share ACL (Default: BUILTIN\Users).
-
-[string]$SharePermissionLevel: The permission level to grant (Default: Change).
-
-**Automation Parameters**
-[switch]$Interactive: Forces the script to run in Full Interactive Mode and skip the initial mode selection prompt.
-
-[string]$OneLiner: Provides all 13 mandatory parameters in a single string, forcing Strict Mode and skipping all prompts.
+**Automation Parameters :**
+ | DataType | VariableName | Description |
+ | :---: | :---: | :---:|
+ | switch | $Strict | Default, forces the script to run in an Interactive Mode and skips optional requirements. |
+ | switch | $Interactive | Forces the script to run in Full Interactive Mode and skip the initial mode selection prompt. |
+ | string | $OneLiner | Provides all 13 mandatory parameters in a single string, forcing Strict Mode and skipping all prompts. |
