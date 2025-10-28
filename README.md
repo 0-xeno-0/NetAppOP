@@ -101,22 +101,22 @@ DomainName: corp.local
 DnsServers: 192.168.10.5;192.168.10.6
 Note: For multiple DNS servers, separate them with a semi-colon (;) inside the string.
 
-|Parameter|Description|Example|
-| :---: || :---: || :---: |
-|$ClusterName|FQDN or IP of the NetApp cluster management interface.|ontap.my.domain.com|
-|$SvmName|The name for the new SVM.|svm_finance|
-|$AggrName|The aggregate to host the SVM root and data volumes.|aggr1|
-|$VolName|The name for the new data volume.|finance_data|
-|$VolSize|The size of the new data volume.|100g|
-|$LifName|The name for the new data LIF.|svm_finance_cifs_lif1|
-|$LifIpAddress|The static IP address for the new LIF.|192.168.1.100|
-|$LifNetmask|The subnet mask for the new LIF.|255.255.255.0|
-|$LifHomeNode|The node where the LIF will be created.|cluster-01|
-|$LifHomePort|The physical or logical port for the LIF.|e0c|
-|$CifsServerName|The NetBIOS name for the new CIFS server.|FINANCE-SMB|
-|$DomainName|The FQDN of the Active Directory domain to join.|my.domain.com|
-|$DnsServers|[Array] One or more DNS server IPs for the SVM.|192.168.1.5|
-|$DnsDomain|The DNS search domain for the SVM.|my.domain.com|
+ | Parameter | Description | Example |
+ | :---: | :---: | :---:|
+ | $ClusterName | FQDN or IP of the NetApp cluster management interface. | ontap.my.domain.com |
+ | $SvmName | The name for the new SVM. | svm_finance |
+ | $AggrName | The aggregate to host the SVM root and data volumes. | aggr1 |
+ | $VolName | The name for the new data volume. | finance_data |
+ | $VolSize | The size of the new data volume. | 100g |
+ | $LifName | The name for the new data LIF. | svm_finance_cifs_lif1 |
+ | $LifIpAddress | The static IP address for the new LIF. | 192.168.1.100 |
+ | $LifNetmask | The subnet mask for the new LIF. | 255.255.255.0 |
+ | $LifHomeNode | The node where the LIF will be created. | cluster-01 |
+ | $LifHomePort | The physical or logical port for the LIF. | e0c |
+ | $CifsServerName | The NetBIOS name for the new CIFS server. | FINANCE-SMB |
+ | $DomainName | The FQDN of the Active Directory domain to join. | my.domain.com |
+ | $DnsServers | [Array] One or more DNS server IPs for the SVM. | 192.168.1.5 |
+ | $DnsDomain | The DNS search domain for the SVM. | my.domain.com |
 
 
 **Optional Parameters (Interactive Mode Only)**
